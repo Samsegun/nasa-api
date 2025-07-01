@@ -1,7 +1,9 @@
-const { habitablePlanets } = require("../../models/planets.model");
+const {
+    getAllPlanets: getAllHabitablePlanets,
+} = require("../../models/planets.model");
 
-function getAllPlanets(req, res) {
-    return res.status(200).json(habitablePlanets);
+async function getAllPlanets(req, res) {
+    return res.status(200).json(await getAllHabitablePlanets());
 }
 
 module.exports = {

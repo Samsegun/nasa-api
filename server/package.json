@@ -7,16 +7,23 @@
         "dev": "nodemon src/server.js",
         "start": "node src/server.js",
         "test": "jest --maxWorkers=1 --watch",
+        "test-openhandles": "jest --detectOpenHandles --maxWorkers=1 --watch ",
         "cluster": "pm2 start src/server.js -i max",
         "stop": "pm2 stop src/server.js"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
+    "jest": {
+        "testEnvironment": "node"
+    },
     "dependencies": {
+        "axios": "^1.10.0",
         "cors": "^2.8.5",
         "csv-parse": "^5.6.0",
+        "dotenv": "^17.0.0",
         "express": "^5.1.0",
+        "mongoose": "^8.16.1",
         "morgan": "^1.10.0",
         "pm2": "^6.0.8"
     },
