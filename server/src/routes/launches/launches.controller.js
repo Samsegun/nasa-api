@@ -8,6 +8,7 @@ const {
 const { getPagination } = require("../../services/query");
 
 async function getAllLaunches(req, res) {
+    console.log(req.query);
     const { skip, limit } = getPagination(req.query);
     const launch = await launches(skip, limit);
 
